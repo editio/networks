@@ -1,0 +1,15 @@
+Type: Compendium
+Package: Network_languages
+Title: Multilingual Discourse in Narrative Fiction
+Version: 0.0.1
+Authors@R: editio.github.io
+Description: Code use for the paper _Multilingual Discourse
+    in Narrative Fiction Analyzed with Character Networks_
+License: MIT
+Depends: 
+    igraph,
+    RColorBrewer,
+    tidyverse,
+    visNetwork
+Encoding: UTF-8
+LazyData: true
