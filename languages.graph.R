@@ -5,6 +5,10 @@
   ###             J.L. Losada 2019              ###
   ###-------------------------------------------###
 
+### ├── languages.graph.R         <--+ you are here
+###   └── languages.graph.viz.R   
+
+
 # Mulitple graph of a network of characters connected by the language they speak.
 
 # This script loads the table of interactions (each row corresponds to one interaction), creates a edge list, a graph object as multigraph, calculates the edges weight, adds degree, betweeness, articulation points, and eigenvector metrics.
