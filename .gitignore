@@ -2,6 +2,8 @@
 .Rhistory
 .RData
 .Ruserdata
+.gitignore
+.gitattributes
 
 *.Rmd
 holepunch.R
