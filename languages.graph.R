@@ -99,7 +99,7 @@ graph <- graph.data.frame(edgelist_weighted, directed = F)
 
   numero.lenguas = nodes.per.language %>% 
     group_by(name) %>%
-    count(name) 
+    count(name, wt = n())  # count() makes automatically weight by the variable n if present in the dataset (it depends on the version). We do not want this, so I have to add 'wt = n()' to comply to other versions.
 
   nodes.per.language$num = numero.lenguas$n[match(nodes.per.language$name, numero.lenguas$name)]
 
