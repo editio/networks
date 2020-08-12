@@ -1,13 +1,14 @@
 Type: Compendium
-Package: Network_languages
-Title: Multilingual Discourse in Narrative Fiction
-Version: 0.0.1
+Package: Network of languages
+Title: R Scripts to Apply SNA to Novels
+Version: 1.1.0
 Authors@R: editio.github.io
-Description: Code use for the paper _Multilingual Discourse
-    in Narrative Fiction Analyzed with Character Networks_
+Description: _Multilingual Discourse and SNA_
 License: MIT
 Depends: 
+    ggalluvial,
     igraph,
+    qualpalr,
     RColorBrewer,
     tidyverse,
     visNetwork

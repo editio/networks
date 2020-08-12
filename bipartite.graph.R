@@ -7,6 +7,7 @@
 
 ### ├── bipartite.graph.R         <--+ you are here
 ###   └── bipartite.graph.viz.R                 
+###   └── bipartite.graph.viz.plot.R 
 
 library(igraph) 
 library(tidyverse)
@@ -18,7 +19,11 @@ library(tidyverse)
 # After runing it, variables are stored in the "graph" object.
 
 # Load data----
-interaction.table <- read.csv("csv/redes.semprilis.csv", na.strings="")
+
+# Uwaga!(1) comment/uncomment depending of novel
+
+# interaction.table <- read.csv("csv/redes.semprilis.csv", na.strings="")
+interaction.table <- read.csv("csv/redes.eustorgio.csv", na.strings="")
 interaction.table <- data.frame(lapply(interaction.table, str_trim)) # str_trim() removes whitespace from start and end of a string. " Semprilis " ≠ "Semprilis".
 
 # Reshape table into edgelist----
@@ -39,5 +44,10 @@ graph <- graph_from_incidence_matrix(get.incidence(graph), weighted=TRUE, direct
 # Metrics----
 V(graph)$deg = igraph::degree(graph)
 
+# Name the graph (optional)
+
+graph$name <- "Multilingual_Novels"
+
 # Remove from Rstudio environment everything but "graph" (just for clarity)
-rm(list = ls(pattern = "^[^graph$]"))
+# rm(list = ls(pattern = "^[^graph$]"))
+
